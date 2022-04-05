@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Books Shop</title>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Asap&display=swap" rel="stylesheet">
+    <!--Icon Monstr-->
+    <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css">
+    <!--Font Awsome-->
+    <script src="https://kit.fontawesome.com/58dcd6696a.js" crossorigin="anonymous"></script>
+    
+    <!--AOS Style Sheet Library
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+
+    <!--My Style Sheet-->
+    <link rel="stylesheet" href="./Css/style.css">
+</head>
+
+<body>
+
+<section class=".landing-page" id="landing-page">
+    <nav>
+        <div class="logo" id="logo">
+            <img src="./Src/logo.png" width="100%" height="100%">
+        </div>
+        <ul>
+            <!-- "liClass" is just to add class on hover to all lis exept "active" -->
+            <li class="home active"><a href="#landing-page"> Home </a></li>
+            <li class="about liClass">
+                <a onclick="aboutClickFunc()">About</a>
+            </li>
+            <li class="Our-Books liClass">
+                <a onclick="ourBooksClickFunc()">Our Books</a>
+            </li>
+            <li class="Contact-us liClass"> 
+                <a onclick="contactUsClickFunc()"> Contact us </a>
+            </li>
+        <ul class="social-media-container">
+            <li class="social-media liClass" id="facebook">
+                <a href="https://facebook.com"> <i class="im im-facebook" > </i> </a> 
+            </li>
+            <li class="social-media liClass" id="twitter">
+                <a href="https://twitter.com"> <i class="im im-twitter" >  </i></a> 
+            </li>
+            <li class="social-media liClass" id="instagram">
+                <a href="https://instagram.com"> <i class="im im-instagram" > </i> </a> 
+            </li>
+        </ul>
+        </ul>
+        
+        <div class="burger-menu">
+            <div class="line l-one"></div>
+            <div class="line l-two"></div>
+            <div class="line l-three"></div>
+        </div>
+    </nav>
+
+    <div class="ill-container">
+        <div class="text" >
+            <h1 data-aos="fade-right" data-aos-duration="2000">
+                Think before you speak ,
+                 Read before you think.
+            </h1>
+            <p data-aos="fade-right" data-aos-duration="2000">
+                Books are good company, in sad times and happy times, for books are people – people who have managed to stay alive by hiding between the covers of a book            </p>
+            <button onclick="ourBooksClickFunc()" data-aos="fade-up" data-aos-duration="2000">
+                check our books !
+            </button>
+
+           
+
+        </div>
+        <div class="ill-img" data-aos="fade-left" data-aos-duration="2000">
+            <img src="Src/book-lover.svg" width="100%" height="100%">
+        </div>
+
+    <!-- BOTTOM RIGHT BAR 
+
+        <div class="bar"></div> -->
+        
+    </div>
+
+    <!-- LOADER -->
+
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    <!-- First Cards -->
+    <div class="first-cards-container">
+        <div class="first-cards" >
+            <i class="fas fa-lightbulb"></i>
+            <h3>
+                New Idea
+            </h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsam earum, ex nihil saepe.
+        </p>
+        </div>
+        <div class="first-cards" >
+            <i class="fas fa-paper-plane"></i>
+            <h3>
+                Online Delivery
+            </h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsam earum, ex nihil saepe.
+        </p>
+        </div>
+        <div class="first-cards" >
+            <i class="fas fa-clock"></i>
+            <h3>
+                always on time
+            </h3>
+            <!-- This Id Is For The ".about" href in big screens -->
+        <p id="about-us-id">
+            <!-- This Id Is For The ".about" href in small screens -->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsam earum, ex nihil saepe. <span id="small-about-us-id"></span>
+        </p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ABOUT US -->
+
+<section class="about-us">
+    <div class="about-illu" data-aos="fade-right" data-aos-duration="1000">
+        <img src="Src/content.svg" width="100%" height="100%" >
+    </div>
+    <div class="about-text" data-aos="fade-left" data-aos-duration="1000"> 
+
+            <h2> 
+                About Us 
+            </h2>
+            <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti aliquam iusto illo, non placeat maiores! Quia recusandae, deleniti similique officiis fugit consequatur impedit est neque at eos porro.
+        </p>
+    </div>
+
+</section>
+
+
+
+<!-- OUR BOOKS -->
+
+
+<section class="our-books-container">
+
+    <div class="buttons" >
+    <button onclick="allBooksFunc(this)" class="allButton active-books-button" >All Books</button>
+        <button onclick="relBooksFunc()" class="relButton" >Relegious Books</button>
+        <button onclick="sieBooksFunc()" class="sieButton" >Sientific Books</button>
+        <button onclick="hisBooksFunc()" class="hisButton " >History Books</button>
+    </div>
+
+    <div class="book rel-book" onclick="galleryFunc(this.children[0].children[0])" >
+        <div class="book-img-cont">
+        <img src="src/rel-1.jpg" width="100%" height="100%" >
+        <div class="more-info-button" >
+            More Info
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        </div>
+        
+    </div>   
+    
+    
+    <div class="book sie-book" onclick="galleryFunc(this.children[0].children[0])" >
+        <div class="book-img-cont">
+        <img src="src/Science-1.jpg" width="100%" height="100%" >
+        <div class="more-info-button" >
+            More Info
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        </div>
+        
+    </div>
+
+    <div class="book rel-book" onclick="galleryFunc(this.children[0].children[0])" >
+        <div class="book-img-cont">
+        <img src="src/rel-2.jpg" width="100%" height="100%" >
+        <div class="more-info-button" >
+            More Info
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        </div>
+        
+    
+    </div>
+
+    <div class="book his-book" onclick="galleryFunc(this.children[0].children[0])" >
+        <div class="book-img-cont">
+        <img src="src/hist-3.jpg" width="100%" height="100%" >
+        <div class="more-info-button" >
+            More Info
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        </div>
+        
+    </div>
+    
+    <div class="book sie-book" onclick="galleryFunc(this.children[0].children[0])" >
+        <div class="book-img-cont">
+        <img src="src/Science-4.jpg" width="100%" height="100%" >
+        <div class="more-info-button" >
+            More Info
+        </div>
+         <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        </div>
+        
+    </div>
+    
+    <div class="book sie-book" onclick="galleryFunc(this.children[0].children[0])" >
+        <div class="book-img-cont">
+        <img src="src/Science-2.jpg" width="100%" height="100%" >
+        <div class="more-info-button" >
+            More Info
+        </div>
+         <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        </div>
+        
+    </div>
+    
+    
+    <div class="book his-book" onclick="galleryFunc(this.children[0].children[0])" >
+        <div class="book-img-cont">
+        <img src="src/hist-1.jpg" width="100%" height="100%" >
+        <div class="more-info-button" >
+            More Info
+        </div>
+         <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        </div>
+        
+    </div>
+
+    <div class="book rel-book" onclick="galleryFunc(this.children[0].children[0])" >
+        <div class="book-img-cont">
+        <img src="src/rel-3.jpg" width="100%" height="100%" >
+        <div class="more-info-button" >
+            More Info
+        </div>
+         <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        </div>
+        
+    </div>
+    
+    
+    
+    <div class="book his-book" onclick="galleryFunc(this.children[0].children[0])" >
+        <div class="book-img-cont">
+        <img src="src/hist-2.jpg" width="100%" height="100%"  id="hist-2">
+        <div class="more-info-button">
+            More Info
+        </div>
+         <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        </div>
+        
+    </div>
+    
+    </section> 
+
+
+<!-- GALLERY ELEMENT -->
+
+<div class="gallery-cont">
+    <div class="close-button" onclick="closeGalFunc()">
+        <i class="fa fa-close"></i>
+    </div>
+    <div class="gal-content-cont">
+        <img src="" alt="" width= "250px" height="300px" >
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla a, deleniti aspernatur ipsa accusamus illo nobis harum ullam! 
+    </p>
+    <button class="buy-now-button">
+        Buy Now !
+    </button>
+</div>
+</div>
+
+
+<!-- Contact Us -->
+
+<footer class="contact-us">
+
+<div class="footer-logo">
+    <img src="./Src/logo.png" alt="logo" width="70" height="70">
+</div>
+
+<div class="footer-social-media">
+    <h4>Social Media :</h4>
+ <div> <a href="https://facebook.com">  <i class="im im-facebook" > </i> FaceBook </a> </div>
+ <div> <a href="https://twitter.com">  <i class="im im-twitter" > </i> Twitter </a>  </div>
+ <div> <a href="https://instagram.com">  <i class="im im-instagram" > </i> Instagram </a> </div>
+    
+</div>
+
+<div class="footer-numbers">
+    <h4>Our Numbers :</h4>
+    <div class="footer-call-number">
+        <i class="im im-phone" > </i> 0925619261
+    </div>
+    <div class="footer-call-number">
+        <i class="im im-phone" > </i> 0937769239
+    </div>
+</div>
+
+</footer>
+
+<!--My JS App-->
+
+    <script src="./Js/app.js"></script>
+ 
+<!-- AOS Anmiation on scroll Library 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(); 
+    </script> -->
+</body>
+
+</html>
